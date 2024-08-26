@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Markazi_Text } from "next/font/google";
 import "./globals.css";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const markazi = Markazi_Text({ subsets: ["latin", "arabic"] });
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={markazi.className}>{children}</body>
+      <body className={markazi.className}>
+        <AntdRegistry>{children}</AntdRegistry>
+      </body>
     </html>
   );
 }
