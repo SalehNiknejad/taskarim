@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="../assets/images/favicon.ico" sizes="any" />
+      </head>
       <body className={markazi.className}>
         <AntdRegistry>{children}</AntdRegistry>
       </body>
