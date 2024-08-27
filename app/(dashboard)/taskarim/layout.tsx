@@ -6,9 +6,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-import Image from "next/image";
-import { TaskarimLogo } from "@/app/assets/images/Taskarim";
+import { Layout, Menu, theme } from "antd";
 const { Header, Content, Sider } = Layout;
 
 const items1: MenuProps["items"] = ["1", "2", "3"].map((key) => ({
@@ -51,7 +49,7 @@ const dashboardLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
           mode="horizontal"
           defaultSelectedKeys={["2"]}
           items={items1}
-          style={{ flex: 1, minWidth: 0 }}
+          style={{ flex: 1 }}
         />
       </Header>
       <Layout>
