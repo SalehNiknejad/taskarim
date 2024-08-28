@@ -43,17 +43,22 @@ const dashboardLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   return (
     <Layout className="h-full">
-      <Header className="flex">
+      <Header className="flex items-center">
+        <img src="" className="h-14 me-4" />
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["2"]}
+          defaultSelectedKeys={["1"]}
           items={items1}
           style={{ flex: 1 }}
         />
       </Header>
       <Layout>
-        <Sider width={200} style={{ background: colorBgContainer }}>
+        <Sider
+          width={200}
+          style={{ background: colorBgContainer }}
+          breakpoint="lg"
+        >
           <Menu
             mode="inline"
             defaultSelectedKeys={["1"]}
