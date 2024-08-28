@@ -23,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className={markazi.className}>
         <AntdRegistry>{children}</AntdRegistry>
+        <SpeedInsights />
       </body>
     </html>
   );
