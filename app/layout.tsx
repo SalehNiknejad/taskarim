@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Markazi_Text } from "next/font/google";
+import { Markazi_Text } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const markazi = Markazi_Text({ subsets: ["latin", "arabic"] });
 
