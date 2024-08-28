@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Layout, Menu, theme } from "antd";
+import Image from "next/image";
 const { Header, Content, Sider } = Layout;
 
 const items1: MenuProps["items"] = ["1", "2", "3"].map((key) => ({
@@ -43,22 +44,30 @@ const dashboardLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   return (
     <Layout className="h-full">
-      <Header className="flex items-center">
-        <img src="" className="h-14 me-4" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={["1"]}
-          items={items1}
-          style={{ flex: 1 }}
-        />
-      </Header>
       <Layout>
         <Sider
           width={200}
           style={{ background: colorBgContainer }}
           breakpoint="lg"
         >
+          <Header
+            style={{ padding: 0, background: colorBgContainer }}
+            className="items-center flex justify-center"
+          >
+            <img
+              src="/images/logoBig.png"
+              className="h-10 me-2 max-lg:hidden"
+              alt="Taskerim"
+              style={{ filter: "brightness(0.75)" }}
+            />{" "}
+            <img
+              src="/images/logosmall.png"
+              className="h-8  lg:hidden"
+              alt="Taskerim"
+              style={{ filter: "brightness(0.75)" }}
+            />
+          </Header>
+
           <Menu
             mode="inline"
             defaultSelectedKeys={["1"]}
