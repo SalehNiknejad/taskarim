@@ -19,12 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body className={markazi.className}>
         <ConfigProvider
           theme={{
             token: {
               fontFamily: "inherit",
+              fontSize: 16,
             },
           }}
         >
