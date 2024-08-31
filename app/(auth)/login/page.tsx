@@ -5,7 +5,7 @@ import { createClient } from "@/app/utils/supabase/client";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
-async function signin(formData: FormData) {
+async function signin() {
   const supabase = createClient();
 
   // type-casting here for convenience
