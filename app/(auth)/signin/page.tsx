@@ -1,8 +1,12 @@
-import AuthForm from "@/app/components/Auth/AuthForm";
 import React from "react";
+import AuthForm from "@/app/components/Auth/AuthForm";
 
-function page() {
-  return <AuthForm title="ورود کاربر" />;
+function signin() {
+  return (
+    <>
+      <AuthForm title="ورود کاربر" createAccont={true} />
+    </>
+  );
 }
 
-export default page;
+export default signin;
