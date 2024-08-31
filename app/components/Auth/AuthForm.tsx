@@ -23,6 +23,7 @@ const AuthForm: FC<AuthFormProps> = ({ title, createAccont }) => {
   const screens = useBreakpoint();
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
+    console.log(typeof values);
   };
   const styles = {
     container: {
