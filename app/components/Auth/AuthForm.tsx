@@ -2,16 +2,23 @@
 
 import React, { FC } from "react";
 import { Button, Form, Grid, Input, theme } from "antd";
-import { LockOutlined, MailOutlined } from "@ant-design/icons";
+import {
+  LockOutlined,
+  MailOutlined,
+  UserAddOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import { useRouter } from "next/navigation";
 
 const { useToken } = theme;
 const { useBreakpoint } = Grid;
-
 export type AuthFormProps = {
   title?: string;
+  createAccont: boolean;
 };
 
-const AuthForm: FC<AuthFormProps> = ({ title }) => {
+const AuthForm: FC<AuthFormProps> = ({ title, createAccont }) => {
+  const router = useRouter();
   const { token } = useToken();
   const screens = useBreakpoint();
   const onFinish = (values: any) => {
@@ -54,7 +61,10 @@ const AuthForm: FC<AuthFormProps> = ({ title }) => {
               style={{ filter: "brightness(0.75)" }}
             />
           </div>
-          <label className="font-bold text-blue-950">{title}</label>
+          <div className="flex gap-2">
+            {!createAccont ? <UserAddOutlined /> : <UserOutlined />}
+            <label className="font-bold text-blue-950">{title}</label>
+          </div>
         </div>
         <Form
           name="normal_login"
@@ -109,6 +119,18 @@ const AuthForm: FC<AuthFormProps> = ({ title }) => {
               ورود
             </Button>
           </Form.Item>
+          {createAccont && (
+            <div className="mt-10">
+              <label>حساب کاربری ندارید؟</label>
+              <Button
+                type="link"
+                children={"ساخت حساب کاربری"}
+                icon={<UserAddOutlined />}
+                size="small"
+                onClick={() => router.push("/signup")}
+              />
+            </div>
+          )}
         </Form>
       </div>
     </section>
