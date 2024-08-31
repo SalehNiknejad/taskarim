@@ -9,7 +9,13 @@ function page() {
         <TaskCard />
         <TaskCard />
         <TaskCard />
-        <TaskCard /> <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
         <TaskCard />
         <TaskCard />
         <TaskCard />
